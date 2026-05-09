@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: var(--font-family-sans);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Page transition */
+.page-transition {
+  animation: fadeIn 120ms ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lead score tier badges */
+.tier-cold {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.tier-warm {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.tier-hot {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.tier-qualified {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.dark .tier-cold {
+  background: #1e293b;
+  color: #94a3b8;
+}
+
+.dark .tier-warm {
+  background: #292524;
+  color: #fbbf24;
+}
+
+.dark .tier-hot {
+  background: #1c1917;
+  color: #f97316;
+}
+
+.dark .tier-qualified {
+  background: #052e16;
+  color: #4ade80;
+}
